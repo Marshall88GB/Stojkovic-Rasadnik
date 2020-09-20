@@ -5,25 +5,7 @@ AOS.init({
     mirror: false, // whether elements should animate out while scrolling past them
 });
 
-const img = [{
-        picture: 'head-1',
 
-    },
-    {
-        picture: 'head-2',
-
-    },
-    {
-        picture: 'head-3',
-
-    }, {
-        picture: 'head-4',
-
-    }, {
-        picture: 'head-5',
-
-    }
-];
 const navMenu = document.getElementById("navigation");
 const header = document.getElementById('header');
 let numPic = 0;
@@ -48,19 +30,6 @@ function headImg() {
 };
 headImg();
 setInterval(function() { headImg(); }, 6000);
-
-// function headImg() {
-
-//     if (numPic >= img.length) {
-//         numPic = 0;
-//     }
-
-
-//     let r = img[numPic].picture
-//     header.style.backgroundImage = `url('/${r}.jpg')`;
-//     numPic++;
-// }
-// headImg();
 
 
 const menuBars = document.getElementById('menu-bars');
@@ -101,8 +70,6 @@ menuBars.addEventListener('click', toggleNav);
 navItems.forEach((nav) => {
     nav.addEventListener('click', toggleNav)
 })
-
-
 
 
 window.onscroll = function() { scrollFunction() };
@@ -149,7 +116,7 @@ L.tileLayer(
         id: "mapbox/streets-v11",
         tileSize: 512,
         zoomOffset: -1,
-        accessToken: "pk.eyJ1IjoibmVubmFkZCIsImEiOiJjazk3cWhkYjkwcXJhM2xtcHNsYjZ5a3Q5In0.K6OXQ0tbM5m5Zuaz0r9S9w",
+        accessToken: "pk.eyJ1IjoibWFyc2hhbGw4OGdiIiwiYSI6ImNrZmF0emdvMjB6NDUyem1hdmoybjB1cHIifQ.PATcsscaygxEJcmjMGmMjg",
     }
 ).addTo(myMap);
 var iconL = L.icon({
@@ -160,8 +127,3 @@ var iconL = L.icon({
 
 var marker = L.marker([43.671853, 21.159219], { icon: iconL }).addTo(myMap);
 marker.bindPopup("Stojković-Kalem Lazarevac").openPopup();
-
-
-// if (numPic <= img.length) {
-//     setInterval(function() { headImg(); }, 8000);
-// }
